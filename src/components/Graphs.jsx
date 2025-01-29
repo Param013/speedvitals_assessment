@@ -27,7 +27,7 @@ const Graph = ({ metric, device, darkMode }) => {
               textStyle: {
                 fontSize: window.innerWidth < 768 ? 14 : 16,
                 fontWeight: 'normal',
-                color: darkMode ? '#fff' : '#000', // Adjust title color
+                color: darkMode ? '#fff' : '#000',
               },
             },
             grid: {
@@ -45,7 +45,7 @@ const Graph = ({ metric, device, darkMode }) => {
                 lineStyle: {
                   type: 'solid',
                   width: 1,
-                  color: darkMode ? '#fff' : '#000', // Adjust tooltip line color
+                  color: darkMode ? '#fff' : '#000', 
                 },
               },
             },
@@ -55,15 +55,15 @@ const Graph = ({ metric, device, darkMode }) => {
               axisLabel: {
                 fontSize: window.innerWidth < 768 ? 10 : 12,
                 rotate: window.innerWidth < 480 ? 45 : 0,
-                color: darkMode ? '#fff' : '#000', // Adjust x-axis label color
+                color: darkMode ? '#fff' : '#000',
               },
               axisTick: { alignWithLabel: true },
-              axisLine: { lineStyle: { color: darkMode ? '#444' : '#ccc' } }, // Adjust x-axis line color
+              axisLine: { lineStyle: { color: darkMode ? '#444' : '#ccc' } },
             },
             yAxis: {
               type: 'value',
-              axisLabel: { fontSize: window.innerWidth < 768 ? 10 : 12, color: darkMode ? '#fff' : '#000' }, // Adjust y-axis label color
-              splitLine: { lineStyle: { type: 'dashed', color: darkMode ? '#555' : '#eee' } }, // Adjust split line color
+              axisLabel: { fontSize: window.innerWidth < 768 ? 10 : 12, color: darkMode ? '#fff' : '#000' },
+              splitLine: { lineStyle: { type: 'dashed', color: darkMode ? '#555' : '#eee' } },
             },
             series: [
               {
@@ -72,7 +72,7 @@ const Graph = ({ metric, device, darkMode }) => {
                 smooth: false,
                 symbolSize: 6,
                 itemStyle: { color: '#1a73e8', borderWidth: 2 },
-                lineStyle: { width: 2, type: 'solid', cap: 'square', color: '#1a73e8' }, // Adjust line color
+                lineStyle: { width: 2, type: 'solid', cap: 'square', color: '#1a73e8' },
                 animationDuration: 1000,
               },
             ],
@@ -101,7 +101,7 @@ const Graph = ({ metric, device, darkMode }) => {
       resizeObserver.disconnect();
       chartInstance.current?.dispose();
     };
-  }, [metric, device, darkMode]); // Add darkMode to dependencies
+  }, [metric, device, darkMode]);
 
   return (
     <div className={`w-full rounded-lg shadow-sm ${darkMode ? "bg-gray-800 border border-black" : "bg-white border border-gray-300"}`}>

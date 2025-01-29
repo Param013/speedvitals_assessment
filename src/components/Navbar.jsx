@@ -20,9 +20,7 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen, toggleDarkMode, darkMod
             </span>
           </div>
 
-          {/* Desktop Navigation */}
           <div className={`hidden md:flex space-x-6 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-            {/* About Us Dropdown */}
             <div className="relative group">
               <button className="hover:text-gray-900 transition-colors">About Us</button>
               <div className={`absolute left-0 mt-2 w-40 rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity 
@@ -36,7 +34,6 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen, toggleDarkMode, darkMod
               </div>
             </div>
 
-            {/* Learn More Dropdown */}
             <div className="relative group">
               <button className="hover:text-gray-900 transition-colors">Learn More</button>
               <div className={`absolute left-0 mt-2 w-40 rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity 
@@ -53,7 +50,6 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen, toggleDarkMode, darkMod
             <a href="#" className="hover:text-gray-900 transition-colors">Privacy Policy</a>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -71,16 +67,13 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen, toggleDarkMode, darkMod
             </button>
           </div>
 
-          {/* Dark Mode Toggle Button */}
           <button onClick={toggleDarkMode} className={`text-xl md:text-2xl ${darkMode ? 'text-yellow-400' : 'text-gray-700'}`}>
             {darkMode ? '🌞' : '🌙'}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className={`md:hidden py-4 space-y-2 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
-            {/* About Us Dropdown */}
             <div className="px-4 py-2">
               <button onClick={() => toggleDropdown('about')} className="w-full text-left flex justify-between">
                 About Us
@@ -99,7 +92,6 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen, toggleDarkMode, darkMod
               )}
             </div>
 
-            {/* Learn More Dropdown */}
             <div className="px-4 py-2">
               <button onClick={() => toggleDropdown('learn')} className="w-full text-left flex justify-between">
                 Learn More
